@@ -75,7 +75,13 @@ class ScratchCard extends React.Component {
       let angle = Math.atan2(this.yPos, this.xPos)
       this.ctx.translate(this.xPos, this.yPos)
       this.ctx.rotate(angle)
-      this.ctx.drawImage(this.brushImage, -this.brushImage.width / 2, -this.brushImage.height / 2)
+      this.ctx.drawImage(
+        this.brushImage,
+        -this.brushImage.width / 2,
+        -this.brushImage.height / 2,
+        this.brushImage.width * 1.5,
+        this.brushImage.height * 1.5
+      )
     } else {
       this.ctx.beginPath()
       this.ctx.arc(this.xPos + this.radius, this.yPos + this.radius, this.radius, 0, Math.PI * 2, false)
@@ -84,7 +90,7 @@ class ScratchCard extends React.Component {
     }
     this.ctx.restore()
     this.updatePercentScratched()
-  }, 40)
+  }, 30)
 
   updatePercentScratched() {
     let counter = 0
