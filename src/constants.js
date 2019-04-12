@@ -21,12 +21,14 @@ export const colors = {
   red: '#D62828',
   blue: '#094074',
   yellow: '#FFDD4A',
+  green: '#3c763d',
   lightBlue: '#dbe9f9',
-  messengerBlue: '#4990e2',
   darkBlue: '#094074',
   darkGreen: '#336534',
   darkYellow: '#FCBF49',
   white: '#fff',
+  button: '#ef4e28',
+  buttonHovered: '#ec3b12'
 }
 
 export const fontSizes = {

@@ -1,28 +1,17 @@
 import React from 'react'
 import {Pie} from 'react-chartjs-2/'
-
 import Spacing from './spacing'
 import {colors} from './constants'
-
-const COLORS = {
-  AVAILABLE: colors.red,
-  ASSIGNED: colors.yellow,
-  REDEEMED: colors.blue
-}
 
 const PieChart = ({inventory = {}}) => {
   const {available, assigned, redeemed} = inventory
   const data = {
-    labels: ['Available', 'Assigned', 'Redeemed'],
+    labels: [`${available} Available`, `${assigned} Assigned`, `${redeemed} Redeemed`],
     datasets: [
       {
         data: [available, assigned, redeemed],
-        backgroundColor: [COLORS.AVAILABLE, COLORS.ASSIGNED, COLORS.REDEEMED],
-        hoverBackgroundColor: [
-          COLORS.AVAILABLE,
-          COLORS.ASSIGNED,
-          COLORS.REDEEMED
-        ]
+        backgroundColor: [colors.green, colors.yellow, colors.blue],
+        hoverBackgroundColor: [colors.darkGreen, colors.darkYellow, colors.darkBlue]
       }
     ]
   }
@@ -32,6 +21,13 @@ const PieChart = ({inventory = {}}) => {
       labels: {
         fontColor: colors.white,
         fontSize: 16
+      }
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItems, data) {
+          return data.labels[tooltipItems.index]
+        }
       }
     }
   }

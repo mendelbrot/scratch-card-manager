@@ -4,21 +4,21 @@ import {colors} from '../../constants'
 import Button from '../button'
 
 const PrimaryButton = styled(Button)`
-  background: ${colors.messengerBlue};
+  background: ${colors.button};
   color: ${colors.white};
 
   &:focus {
-    background: ${colors.messengerBlue};
+    background: ${colors.button};
     color: ${colors.white};
   }
 
   &:active {
-    background: ${colors.darkBlue};
+    background: ${colors.buttonHovered};
     color: ${colors.white};
   }
   &[disabled] {
-    background: ${colors.lightBlue};
-    border-color: ${colors.lightBlue};
+    background: ${colors.button};
+    border-color: ${colors.button};
     color: ${colors.white};
   }
 `

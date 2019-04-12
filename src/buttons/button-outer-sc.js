@@ -4,18 +4,18 @@ import {border, colors, layout, neutrals} from '../constants'
 const ButtonSC = styled.button.attrs({type: 'button'})`
   width: ${({fullWidth}) => (fullWidth ? '100%' : 'auto')};
   padding: 0;
-  border: 1px solid ${colors.messengerBlue};
+  border: 1px solid ${colors.white};
   border-radius: ${border.radius};
   background: ${colors.white};
   outline: none;
-  color: ${colors.messengerBlue};
+  color: ${colors.white};
   vertical-align: middle;
   transition: 0.2s ease-out all;
   -webkit-appearance: none;
   &:active,
   &:focus {
     background: ${neutrals.neutral10};
-    color: ${colors.messengerBlue};
+    color: ${colors.white};
   }
 
   &[disabled] {
